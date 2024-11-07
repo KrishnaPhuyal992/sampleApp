@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login or Register to access your account">
+    <meta name="keywords" content="login, register, authentication, web app">
+    <meta name="author" content="Your Name">
     <title>Login / Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,14 +19,14 @@
         <form id="auth-form" action="https://sample-app-nine-wine.vercel.app/user/login" method="POST">
             <div id="name-field" style="display: none;">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name">
+                <input type="text" id="name" name="name" aria-label="Full Name">
             </div>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required aria-label="Email Address">
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required aria-label="Password">
 
             <button type="submit" id="submit-button">Login</button>
         </form>
@@ -42,13 +45,13 @@
                 formTitle.textContent = 'Register';
                 toggleText.innerHTML = 'Already have an account? <a href="#" onclick="toggleForm()">Login</a>';
                 nameField.style.display = 'block';
-                authForm.action = 'https://sample-app-nine-wine.vercel.app/user/register';
+                authForm.action = 'https://sample-app-nine-wine.vercel.app/user/register'; // Register URL
                 submitButton.textContent = 'Register';
             } else {
                 formTitle.textContent = 'Login';
                 toggleText.innerHTML = 'Don\'t have an account? <a href="#" onclick="toggleForm()">Sign Up</a>';
                 nameField.style.display = 'none';
-                authForm.action = 'https://sample-app-nine-wine.vercel.app/user/login';
+                authForm.action = 'https://sample-app-nine-wine.vercel.app/user/login'; // Login URL
                 submitButton.textContent = 'Login';
             }
         }

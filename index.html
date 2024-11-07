@@ -13,7 +13,7 @@
         <!-- Toggle Button -->
         <p id="toggle-text">Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
         
-        <form id="auth-form" action="http://localhost:3000/user/login" method="POST">
+        <form id="auth-form" action="https://sample-app-nine-wine.vercel.app/user/login" method="POST">
             <div id="name-field" style="display: none;">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name">
@@ -42,13 +42,13 @@
                 formTitle.textContent = 'Register';
                 toggleText.innerHTML = 'Already have an account? <a href="#" onclick="toggleForm()">Login</a>';
                 nameField.style.display = 'block';
-                authForm.action = 'http://localhost:3000/user/register';
+                authForm.action = 'https://sample-app-nine-wine.vercel.app/user/register';
                 submitButton.textContent = 'Register';
             } else {
                 formTitle.textContent = 'Login';
                 toggleText.innerHTML = 'Don\'t have an account? <a href="#" onclick="toggleForm()">Sign Up</a>';
                 nameField.style.display = 'none';
-                authForm.action = 'http://localhost:3000/user/login';
+                authForm.action = 'https://sample-app-nine-wine.vercel.app/user/login';
                 submitButton.textContent = 'Login';
             }
         }
